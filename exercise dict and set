@@ -1,0 +1,14 @@
+🔹 Ejercicio 1: Frecuencia de elementos (Diccionarios)
+Escribí una función que reciba una lista de palabras y devuelva un diccionario con la cantidad de veces que aparece cada palabra.
+
+def contar_palabras(lista):
+    count = {}
+
+    for i in lista:
+        count[i] = count.get(i, 0) + 1
+
+    print(count)
+
+
+print(contar_palabras(["hola", "mundo", "hola", "python", "mundo", "hola"]))
+
