@@ -12,8 +12,8 @@ def contar_palabras(lista):
 
 print(contar_palabras(["hola", "mundo", "hola", "python", "mundo", "hola"]))
 
-🔹 Ejercicio 2: Palabra ùnicas (Conjuntos)
-Escribì una funciòn que reciba dos listas de palabras y devuelvan un conjunto con las palabras que estàn en la primera lista pero no en la segunda.
+🔹 Ejercicio 2: Palabra únicas (Conjuntos)
+Escribí una función que reciba dos listas de palabras y devuelvan un conjunto con las palabras que están en la primera lista pero no en la segunda.
 
 def palabras_unicas(lista1, lista2):
     set1 = set(lista1)
@@ -24,3 +24,21 @@ def palabras_unicas(lista1, lista2):
     
     
 print(palabras_unicas(["rojo", "azul", "verde"], ["azul", "negro"]))
+
+🔹 Ejercicio 3: Números únicos (Conjuntos)
+Escribí una función que devuelva un conjunto con los números que aparecen solo una vez en la lista.
+def numeros_unicos(lista):
+    conjunto = {}
+    unicos = set()
+    for i in lista:
+        conjunto[i] = conjunto.get(i, 0) + 1
+        
+    for numero, cantidad in conjunto.items():
+        if cantidad == 1:
+           unicos.add(numero)
+        
+    return unicos
+    
+           
+    
+print(numeros_unicos([1, 2, 3, 2, 4, 5, 1, 6]))
