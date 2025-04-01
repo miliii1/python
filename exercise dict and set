@@ -12,3 +12,15 @@ def contar_palabras(lista):
 
 print(contar_palabras(["hola", "mundo", "hola", "python", "mundo", "hola"]))
 
+🔹 Ejercicio 2: Palabra ùnicas (Conjuntos)
+Escribì una funciòn que reciba dos listas de palabras y devuelvan un conjunto con las palabras que estàn en la primera lista pero no en la segunda.
+
+def palabras_unicas(lista1, lista2):
+    set1 = set(lista1)
+    set2 = set(lista2)
+    
+    set3 = set1.difference(set2)
+    return set3
+    
+    
+print(palabras_unicas(["rojo", "azul", "verde"], ["azul", "negro"]))
