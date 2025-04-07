@@ -1,8 +1,30 @@
 🔰 Ejercicio 1: Números pares al cuadrado
 📌 Crear una lista con los cuadrados de los números pares entre 1 y 20.
-cuadrados = [i**2 for i in range(20)]
+cuadrados = [i**2 for i in range(1, 21) if i % 2 == 0] (corregido)✅
 print(cuadrados)
 
 🔰 Ejercicio 2: Longitud de palabras
 📌 Dada una lista de palabras, crear un diccionario que tenga como clave la palabra y como valor su longitud.
-def 
+palabras = ["python", "facultad", "back"]
+longitud = for palabras in lista count
+
+corregido:
+palabras = ["python", "facultad", "back"]
+longitud = {palabra: len(palabra) for palabra in palabras}
+print(longitud)
+
+
+😈 Bonus Crack
+Convertí esta lógica a comprensión de diccionarios:
+""" palabras = ["python", "facultad", "back"]
+longitudes = {palabra: len(palabra) for palabra in palabras}
+"""
+def contar_palabras(lista):
+    count = {}
+    for palabras in lista:
+        count[palabras] = len(palabras)
+        
+    return count
+
+print(contar_palabras(["python", "facultad", "back"]))
+
