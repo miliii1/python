@@ -28,3 +28,21 @@ def contar_palabras(lista):
 
 print(contar_palabras(["python", "facultad", "back"]))
 
+🚀 Parte 1: Comprensión intermedia (listas + diccionarios)
+🧠 Ejercicio 1: Filtrar y elevar al cubo
+📌 Crea una lista por comprensión con los cubos de los números entre 1 y 30 que sean múltiplos de 3 pero no de 5.
+alcubo = [i**3 for i in range(1, 31) if i % 3 == 0 and i % 5 != 0]
+print(alcubo)
+
+🧠 Ejercicio 2: Crear diccionario de edades por comprensión
+📌 Dada esta lista de personas, generá un diccionario que tenga como clave el nombre y como valor la edad.
+
+person = [("Mili", 22), ("Juan", 25), ("Lu", 30), ("Pedro", 25)]
+print(dict(person))
+
+_Por compresión_
+edades = {name: age for name, age in person}
+print(edades)
+
+
+
