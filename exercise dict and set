@@ -68,7 +68,55 @@ personas = [
 print(contar_edades(personas))
 
 
+🔹 Ejercicio 5 - Inventario de productos (Diccionarios y listas)
+Tenés una lista de productos vendidos, cada uno representado como una tupla con el nombre y la cantidad vendida. Escribí una función que devuelva un diccionario con el nombre del producto como clave y la cantidad total vendida como valor.
 
+
+def venta(productos):
+    count = {}
+    
+    for name, cant in productos:
+        count[name] = count.get(name, 0) + cant
+        
+        
+    return count
+    
+ 
+ventas = [
+    ("manzana", 3),
+    ("banana", 2),
+    ("manzana", 1),
+    ("pera", 4),
+    ("banana", 1)
+]
+
+print(venta(ventas))
+
+
+🔹 Ejercicio 6 - Buscar personas por edad (Diccionarios y listas)
+Escribí una función que reciba una lista de tuplas como esta:
+
+def buscar_person(lista):
+    count = {}
+    
+    for name, age in lista:
+        if age not in count:
+           count[age] = []
+        count[age].append(name)
+         
+        
+    return count
+    
+personas = [
+    ("Ana", 25),
+    ("Luis", 30),
+    ("Carlos", 25),
+    ("María", 22),
+    ("Pedro", 30),
+    ("Lucía", 25)
+]
+
+print(buscar_person(personas))
 
 
 
