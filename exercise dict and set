@@ -42,3 +42,33 @@ def numeros_unicos(lista):
            
     
 print(numeros_unicos([1, 2, 3, 2, 4, 5, 1, 6]))
+
+🔹 Ejercicio 4 - Recuento de edades (Diccionarios y tuplas)
+Tenés una lista de tuplas, donde cada tupla representa a una persona con su nombre y su edad.
+Escribí una función que devuelva un diccionario con la edad como clave y la cantidad de personas con esa edad como valor.
+
+def contar_edades(tupla):
+    count = {}
+
+    for i in tupla:
+        edad = i[1]
+        count[edad] = count.get(edad, 0) + 1
+
+    return count
+
+personas = [
+    ("Ana", 25),
+    ("Luis", 30),
+    ("Carlos", 25),
+    ("María", 22),
+    ("Pedro", 30),
+    ("Lucía", 25)
+]
+
+print(contar_edades(personas))
+
+
+
+
+
+
