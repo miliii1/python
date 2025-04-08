@@ -16,8 +16,6 @@ palabras = ["Python", "Backend", "Facultad", "Crack"]
 longitudes = list(map(lambda x: len(x), palabras))
 # FORMA MÁS PRÁCTICA
 longitudes = list(map(len, palabras))
-
-
 print(longitudes)  # ➡️ [6, 7, 8, 5]
 
 *** FILTER ***
@@ -25,17 +23,17 @@ print(longitudes)  # ➡️ [6, 7, 8, 5]
 📌 filter() sirve para filtrar elementos de una lista según una condición. Usa una función que devuelve True o False.
 # 🔰 Queremos quedarnos solo con los números pares de esta lista:
 numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
 pares = list(filter(lambda x: x % 2 == 0, numeros))
 
-print(pares)
+print(pares) # ➡️ [2, 4, 6, 8, 10]
 
 
 ✅ Ejercicio 2: Filtrar palabras largas
 # 🔰 Filtrar las palabras que tienen más de 6 letras:
 palabras = ["Python", "Facultad", "UTN", "Ingeniería", "Hola", "Comida"]
 largas = list(filter(lambda x: len(x) > 6, palabras))
-print(largas)
+
+print(largas) # ➡️ ['Facultad', 'Ingeniería']
 
 
 🔁 Parte 2: Combinar filter() + map()
@@ -58,9 +56,30 @@ nombres_mayus = list(map(lambda i: i[0].upper(), age))
 print(nombres_mayus)  # ➡️ ['JUAN', 'PEDRO']
 
 
+*** SORTED ***
+🧪 Ejercicio 1: Ordenar palabras por longitud
+📌 Dada una lista de palabras, ordenalas por su cantidad de letras.
+palabras = ["Hola", "Facultad", "Python", "UTN"]
 
+ordenados = sorted(palabras, key=lambda x: len(x))
 
+print(ordenados) # ➡️ ['UTN', 'Hola', 'Python', 'Facultad']
 
+🧪 Ejercicio 2: Ordenar lista de tuplas por edad
+📌 Dada esta lista de personas, ordenalas por edad de menor a mayor.
+personas = [("Mili", 22), ("Juan", 28), ("Ana", 25), ("Pedro", 30)]
+
+ordenar_edad = sorted(personas, key=lambda x: x[1])
+
+print(ordenar_edad) # ➡️ [('Mili', 22), ('Ana', 25), ('Juan', 28), ('Pedro', 30)]
+
+🧪 Ejercicio 3: Ordenar nombres por la última letra
+📌 Dada una lista de nombres, ordenalos por la última letra de cada uno.
+nombres = ["Lucía", "Pedro", "Ana", "Juli", "Roberto"]
+
+ordenar_name = sorted(nombres, key=lambda x: x[-1]) #si lo quiesiera al revés de la Z - A => reverse=True #➡️ ['Pedro', 'Roberto', 'Juli', 'Lucía', 'Ana']
+
+print(ordenar_name) # ➡️ ['Ana', 'Lucía', 'Pedro', 'Juli', 'Roberto']  (según orden alfabético de la última letra)
 
 
 
