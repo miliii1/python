@@ -1,0 +1,25 @@
+Ejercicios de LAMBDA, MAP, FILTER, SORTED
+
+*** LAMBDA, LEN Y MAP ***
+🧪 Ejercicio 1: Elevar al cuadrado
+📌 Dada esta lista de números, usá map() y lambda para obtener una nueva lista con cada número al cuadrado.
+numeros = [1, 2, 3, 4, 5]
+# 🔧 Tu código acá
+resultado = list(map(lambda x: x**2, numeros))
+
+print(resultado)  # ➡️ [1, 4, 9, 16, 25]
+
+🧪 Ejercicio 2: Obtener las longitudes de las palabras
+📌 Dada esta lista de palabras, creá una lista con la cantidad de letras de cada palabra usando map() y lambda.
+palabras = ["Python", "Backend", "Facultad", "Crack"]
+# 🔧 Tu código acá
+longitudes = list(map(lambda x: len(x), palabras))
+# FORMA MÁS PRÁCTICA
+longitudes = list(map(len, palabras))
+
+
+print(longitudes)  # ➡️ [6, 7, 8, 5]
+
+*** FILTER ***
+🧪 Parte 1: Solo filter()
+📌 filter() sirve para filtrar elementos de una lista según una condición. Usa una función que devuelve True o False.
