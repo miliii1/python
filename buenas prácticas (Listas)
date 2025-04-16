@@ -79,9 +79,30 @@ Escriba un programa en Python para obtener una lista, ordenada de forma crecient
 Lista de ejemplo: [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
 Resultado esperado: [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
 
+def order_tupla(tupla):
+  return sorted(tupla, key=lambda x: x[-1])
+print(order_tupla([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)])) # [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
 
+5. Contar cuántas veces aparece una letra en una cadena.
 
+def count_letters(str, x):
+  let = str.lower()
+  return let.count(x)
+  
+print(count_letters("aaBcdD", "b"))
 
+6. Imprimir los primeros n múltiplos de 5 entre 1500 y 2700.
+
+for i in range(1500, 2700):
+    if i % 7 == 0 or i % 5 == 0:
+      print(i)
+
+7. Comprobar si un número dado está entre 1 y 100 (inclusive).
+def num(n):
+  return 1 <= n <= 100
+  
+print(num(101)) # False
+print(num(5)) # True
 
 
 
