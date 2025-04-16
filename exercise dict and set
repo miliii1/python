@@ -118,5 +118,26 @@ personas = [
 
 print(buscar_person(personas))
 
+7. Iterar un diccionario e imprimir claves y valores.
+mydict = {
+"name": "Nova",
+"age": 20,
+"country": "Argentina",
+"year": 2023
+}
+
+for c, v in mydict.items():
+  print(c, v)
+
+
+
+
+
+
+
+
+
+
+
 
 
