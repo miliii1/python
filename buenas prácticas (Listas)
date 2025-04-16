@@ -44,5 +44,64 @@ _Por compresión_
 edades = {name: age for name, age in person}
 print(edades)
 
+🔰 1. Sumar elementos en la lista
+Escribe un programa en Python para sumar todos los elementos de una lista.
+
+def list_sum(lista):
+  return sum(lista)
+  
+print(list_sum([1, 2, 3, 4, 5])) # --> 15
+
+🔰 2. Eliminar elementos específicos de la lista
+
+Escriba un programa en Python para imprimir una lista específica después de eliminar los elementos 0, 4 y 5.
+Lista de ejemplo: ['Rojo', 'Verde', 'Blanco', 'Negro', 'Rosa', 'Amarillo']
+Salida esperada: ['Verde', 'Blanco', 'Negro']
+
+def remove_ob(lista):
+  del lista[0], lista[3:5]
+  return lista
+  
+print(remove_ob(['Rojo', 'Verde', 'Blanco', 'Negro', 'Rosa', 'Amarillo'])) # --> ['Verde', 'Blanco', 'Negro']
+
+3. Convertir lista en cadena
+
+Escribe un programa en Python para convertir una lista de caracteres en una cadena.
+
+def carather(lista):
+  return "".join(lista)
+  
+print(carather(["P", "Y", "T", "H", "O", "N"]))
+
+4. Ordenar tuplas por último elemento
+
+Escriba un programa en Python para obtener una lista, ordenada de forma creciente por el último elemento de cada tupla, de una lista dada de tuplas no vacías.
+Lista de ejemplo: [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+Resultado esperado: [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
