@@ -1,12 +1,16 @@
-registro = {}
+print("Ingresar usuario a la web")
+count = 0
 
-usuario = input("Ingrese nombre de usuario: ")
-
-if usuario in registro:
-    print("Usuario válido, puedes continuar: ")
-    contraseña = input("Ingrese contraseña: ")
-    valid_password = ("PYnative@#2023")
-    if contraseña == valid_password:
-        print("Bienvenido a tu cuenta!. ")
+while count < 3:
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+    if username== "admi1" and password== "1234":
+        print("Access valid!")
+        break
     else:
-        print("Usuario inválido. Contacto a su administrador. ")
+        print("Invalid Access. Try again")
+        count += 1
+        
+        
+if count == 3:
+    print("Se ha pasado el limite de intentos. ")
