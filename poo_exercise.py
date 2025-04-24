@@ -48,7 +48,23 @@ class Auto:
         self.enmarcha = True
         print(f"El {self.marca} {self.modelo} está en marcha.")
 
-    
+
 class AutoDeportivo:
 
     def __init__(self, marca, modelo, turbo)
+    super().__init__(marca, modelo)
+    self.turbo = turbo
+    
+    def turbo(self):
+        if self.turbo == True # Aqui se encunetra el problema
+            print("Este auto tiene turbo")
+        else:
+            print("Este auto NO tiene turbo")
+            
+  
+miCoche = AutoDeportivo("Fiat", "FastBack", False)
+
+miCoche.arrancar()
+miCoche.turbo()
+
+
