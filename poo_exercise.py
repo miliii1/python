@@ -3,7 +3,7 @@
 Creá una clase Persona con nombre y edad, y un método saludar() que imprima algo como: "Hola, soy [nombre] y tengo [edad] años."
 Luego, creá una subclase Estudiante que herede de Persona y agregue el atributo carrera y el método estudiar() que diga: "Estoy estudiando [carrera].
 """
-
+"""
 class Person:
 
     def __init__(self, name, age):
@@ -28,7 +28,7 @@ class Student(Person):
 myStudent = Student("Nova", 22, "Ingeniería en Sistemas")
 myStudent.saludar()
 myStudent.carrera()
-
+"""
 # EJERCICIO 2 – Herencia con comportamiento propio
 """
 Usá tu clase Auto de antes (con marca y modelo) y creá una subclase AutoDeportivo que agregue un atributo turbo (booleano) 
@@ -49,22 +49,28 @@ class Auto:
         print(f"El {self.marca} {self.modelo} está en marcha.")
 
 
-class AutoDeportivo:
+class AutoDeportivo(Auto):
 
-    def __init__(self, marca, modelo, turbo)
-    super().__init__(marca, modelo)
-    self.turbo = turbo
+     def __init__(self, marca, modelo, turbo):
+        super().__init__(marca, modelo)
+        self.turbo = turbo
     
-    def turbo(self):
-        if self.turbo == True # Aqui se encunetra el problema
-            print("Este auto tiene turbo")
+     def tiene_turbo(self):
+        if self.turbo:
+            print(f"El auto: {self.marca} {self.modelo} SI tiene turbo")
         else:
-            print("Este auto NO tiene turbo")
+            print(f"El auto: {self.marca} {self.modelo} NO tiene turbo")
             
+     def __str__(self):
+        status_turbo = "Sí" if self.turbo else "No"
+        return f"{self.marca} {self.modelo} - Turbo: {status_turbo}"
   
+
+
 miCoche = AutoDeportivo("Fiat", "FastBack", False)
+miCoche.tiene_turbo()
+print(miCoche)
 
-miCoche.arrancar()
-miCoche.turbo()
-
-
+miCoche2 = AutoDeportivo("Lamborgini", "BWW", True)
+miCoche2.tiene_turbo()
+print(miCoche2)
