@@ -92,3 +92,18 @@ for i in num:
     else:
         print("No es primo")"""
 # me quede estancada nosé que pasa :( jajaja)
+
+
+
+# =============== NIVEL 3: LÓGICA Y COMPRENSIÓN =============
+
+
+# EJERCICIO 1: Eliminar duplicados.
+
+def removeList(lista):
+    return set(lista)
+    
+    
+print(removeList([1, 2, 3, 4, 4, 4, 5, 6, 6, 7])) # [1, 2, 3, 4, 5, 6, 7]
+print(removeList([1, 2, 2, 3, 4, 1, 5])) # [1, 2, 3, 4, 5]
+
