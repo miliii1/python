@@ -107,3 +107,15 @@ def removeList(lista):
 print(removeList([1, 2, 3, 4, 4, 4, 5, 6, 6, 7])) # [1, 2, 3, 4, 5, 6, 7]
 print(removeList([1, 2, 2, 3, 4, 1, 5])) # [1, 2, 3, 4, 5]
 
+# EJERCICIO 2: Contar palabras
+"""
+Pedirle al usuario e imprimir cuantas palabras tiene.
+"""
+
+palabra = input("Enter your frase: ")
+
+newPalabra = palabra.split()
+print(len(newPalabra))
+
+
+
