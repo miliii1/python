@@ -157,12 +157,102 @@ if intentos == 3:
 Que arme una contraseña aleatoria usando letras, números y símbolos.
 (Usás import random y string)
 """
+import random
+import string
+import secrets
+
+caracteres = string.ascii_letters + string.digits + string.punctuation
+
+passLongitud = 8
+password = []
+
+password.append(random.choice(string.ascii_letters))
+password.append(random.choice(string.digits))
+password.append(random.choice(string.punctuation))
+
+while len(password) < passLongitud:
+    password.append(secrets.choice(caracteres))
+
+random.shuffle(password)
+
+password = "".join(password)
+
+print (f"Tu contraseña es: {password}")
+
 
 # EJERCICIO 5: Contador de palabras en un texto:
 """
 Recibís un string largo y devolvés cuántas palabras tiene.
 (Pista: texto.split())
+
 """
+texto = input("Ingrese un texto: ")
+
+newText = texto.split()
+
+print(len(newText))
+
+# 6. Suma de dígitos:
+
+"""Dado un número, devolvé la suma de sus dígitos.
+(Ej: 123 ➔ 6 porque 1+2+3=6)"""
+
+def sumar_digitos(num):
+    numero = [int(x) for x in str(num)]
+    suma = sum(numero)
+    return suma
+
+print(sumar_digitos(123))
+
+
+#7. Invertir una lista:
+
+"""Recibís una lista y la devolvés al revés.
+(Ej: [1,2,3] ➔ [3,2,1])"""
+
+def list_reverse(lista):
+    return lista[::-1]
+
+print(list_reverse([1, 2, 3]))
+
+#8. Sacar elementos impares:
+
+"""Recibís una lista y devolvés solo los pares.
+(Ej: [1,2,3,4,5] ➔ [2,4])"""
+
+def num_pares(lista):
+    lista_par = []
+    lista_impar = []
+    for i in lista:
+        if i % 2 == 0:
+            lista_par += [i]
+        else:
+            lista_impar += [i]
+            
+    return lista_par
+    #return lista_impar
+        
+print(num_pares([1, 2, 3, 4, 5]))
+
+
+# =============== NIVEL 4: =============
+# 1. Calcular el factorial de un número. (Ej: 5 ➔ 5 × 4 × 3 × 2 × 1 = 120) (Pista: usá un bucle for.)
+
+def num_factorial(num):
+    if num > 0:
+        return num * num_factorial(num - 1)
+    else:
+        return 1
+    
+print(num_factorial(5))
+
+#2. Encontrar el máximo de una lista sin usar max(). (Ej: [5, 7, 2, 9, 1] ➔ 9)
+
+def max_lista(lista):
+    lista_max = sorted(lista, reverse=True)
+    return lista_max[0]
+
+print(max_lista([5, 7, 2, 9, 1]))
 
 
 
