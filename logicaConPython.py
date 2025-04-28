@@ -117,5 +117,52 @@ palabra = input("Enter your frase: ")
 newPalabra = palabra.split()
 print(len(newPalabra))
 
+# 3. Adivina el número
+"""
+Escribir un pequeño juego donde el programa genera un número del 1 al 10, y el usuario debe adivinarlo. El programa da pistas si es mayor o menor.
+(Pista: usá import random y random.randint(1, 10))
+
+"""
+
+import random
+
+numSecret = random.randint(1, 10)
+intentos = 0
+
+while intentos < 3:
+
+    try:
+        num = int(input("Enter your number: "))
+    except ValueError:
+        print("No es un número valido.")
+        continue
+    
+    if num == numSecret:
+       print("Felicidades! adivinaste el numero!.")
+       break
+
+    elif num > numSecret:
+        print("El numero debe ser más chico.")
+    else: 
+        print("El numero debe ser más grande.")
+
+    intentos += 1
+    print(f"Te quedan {intentos} intentos. ")
+
+if intentos == 3:
+    print(f"Se acabaron los intentos el numero era: {numSecret}")
+
+# EJERCICIO 4: Generador de contraseñas:
+"""
+Que arme una contraseña aleatoria usando letras, números y símbolos.
+(Usás import random y string)
+"""
+
+# EJERCICIO 5: Contador de palabras en un texto:
+"""
+Recibís un string largo y devolvés cuántas palabras tiene.
+(Pista: texto.split())
+"""
+
 
 
