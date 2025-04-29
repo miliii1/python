@@ -307,9 +307,6 @@ def esPalindromo(num):
 print(esPalindromo(123))
 print(esPalindromo(121))
 
-print(esPalindromo(123))
-print(esPalindromo(121)) ## Tengo una duda con este nosé que podria estar mal :(
-
 
 # 6. Suma de valores únicos en una lista
 
