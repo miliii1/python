@@ -256,3 +256,53 @@ print(max_lista([5, 7, 2, 9, 1]))
 
 
 
+def contarLista(lista):
+    return len(lista)
+    
+    
+print(contarLista([10, 20, 30]))
+
+# 3. Contar elementos de una lista
+
+""" 
+Crear una función que reciba una lista y devuelva cuántos elementos contiene.
+(Usá len() adentro de la función).
+[10, 20, 30] ➔ 3 elementos """
+
+
+---
+
+# 4. Eliminar duplicados sin set()
+
+"""Crear una función que elimine los elementos duplicados de una lista, sin usar set().
+Tendrás que armar una nueva lista y agregar solo los elementos que todavía no estén."""
+# [1, 2, 2, 3, 4, 1, 5] ➔ [1, 2, 3, 4, 5]
+
+
+
+---
+
+#5. Comprobar si un número es palíndromo
+
+"""Crear una función que reciba un número y diga si es palíndromo (es igual al revés).
+(Tip: convertí el número en string).
+121 ➔ Palíndromo ✅
+123 ➔ No es palíndromo ❌
+"""
+
+---
+
+# 6. Suma de valores únicos en una lista
+
+"""Crear una función que sume solo los valores que aparecen una sola vez en una lista.
+[1, 2, 3, 2, 1] ➔ 3
+(porque el 3 es el único que aparece una sola vez)"""
+
+
+---
+
+#7. Contar vocales en un string
+
+"""Crear una función que reciba un texto y devuelva cuántas vocales tiene.
+(Tip: podés recorrer el texto con un for y contar las vocales).
+"Hola Mundo" ➔ 4 vocales """
