@@ -302,7 +302,10 @@ print(eliminarDuplicate([1, 2, 2, 3, 4, 1, 5]))
 def esPalindromo(num):
     numInvertido = str(num)[::-1]
 
-    return "Si es palindromo" if num == numInvertido else "No es palindromo"
+    return "Si es palindromo" if str(num) == numInvertido else "No es palindromo"
+
+print(esPalindromo(123))
+print(esPalindromo(121))
 
 print(esPalindromo(123))
 print(esPalindromo(121)) ## Tengo una duda con este nosé que podria estar mal :(
