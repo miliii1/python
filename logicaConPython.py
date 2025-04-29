@@ -269,8 +269,10 @@ Crear una función que reciba una lista y devuelva cuántos elementos contiene.
 (Usá len() adentro de la función).
 [10, 20, 30] ➔ 3 elementos """
 
+def contarList(lista):
+    return len(lista)
 
----
+print(contarList([10, 20, 30]))
 
 # 4. Eliminar duplicados sin set()
 
@@ -278,19 +280,33 @@ Crear una función que reciba una lista y devuelva cuántos elementos contiene.
 Tendrás que armar una nueva lista y agregar solo los elementos que todavía no estén."""
 # [1, 2, 2, 3, 4, 1, 5] ➔ [1, 2, 3, 4, 5]
 
+def eliminarDuplicate(lista):
+    newList = []
 
+    for i in lista:
+        if i not in newList:
+            newList.append(i)
+  #  return newList
 
----
+print(eliminarDuplicate([1, 2, 2, 3, 4, 1, 5]))
+
 
 #5. Comprobar si un número es palíndromo
 
 """Crear una función que reciba un número y diga si es palíndromo (es igual al revés).
 (Tip: convertí el número en string).
-121 ➔ Palíndromo ✅
-123 ➔ No es palíndromo ❌
+121 ➔ Palíndromo 
+123 ➔ No es palíndromo 
 """
 
----
+def esPalindromo(num):
+    numInvertido = str(num)[::-1]
+
+    return "Si es palindromo" if num == numInvertido else "No es palindromo"
+
+print(esPalindromo(123))
+print(esPalindromo(121)) ## Tengo una duda con este nosé que podria estar mal :(
+
 
 # 6. Suma de valores únicos en una lista
 
@@ -298,11 +314,25 @@ Tendrás que armar una nueva lista y agregar solo los elementos que todavía no 
 [1, 2, 3, 2, 1] ➔ 3
 (porque el 3 es el único que aparece una sola vez)"""
 
+def sumUnicos(lista):
+    pass
 
----
+print(sumUnicos([1, 2, 3, 2, 1]))
+
+
 
 #7. Contar vocales en un string
 
 """Crear una función que reciba un texto y devuelva cuántas vocales tiene.
 (Tip: podés recorrer el texto con un for y contar las vocales).
 "Hola Mundo" ➔ 4 vocales """
+
+def contarVocal(texto):
+    vocales = ["a", "e", "i", "o", "u"]
+    cant = 0
+    for i in texto:
+        if i.lower() in vocales:
+            cant += 1
+    return f"{texto} ➔  {cant} vocales"
+
+print(contarVocal("Hola Mundo"))
